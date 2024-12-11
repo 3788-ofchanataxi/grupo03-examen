@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Conversor de Moneda</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic"
+        rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Paises Bajos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menú
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="historia.html">Historia y
+                            Formación</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cultura.html">Cultura y
+                            Tradiciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="geografia.html">Geografía y
+                            Biodiversidad</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="economia.html">Economía</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="lugares.html">Lugares
+                            Turísticos</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="conversor.html">Conversor de
+                            moneda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('img/divisas.png')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>Conversor de moneda</h1>
+                        <span class="subheading">¡Convierte fácilmente tu moneda a una gran variedad de divisas!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h2 class="text-center">Conversor de Divisas</h2>
+                <form id="form_conversion" onsubmit="event.preventDefault(); convertirMoneda();">
+                    <div class="form-group">
+                        <label for="moneda_origen">Moneda de origen:</label>
+                        <select id="moneda_origen" class="form-control">
+                            <option value="USD">Dólar estadounidense (USD) - Estados Unidos</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="ARS">Peso argentino (ARS) - Argentina</option>
+                            <option value="COP">Peso colombiano (COP) - Colombia</option>
+                            <option value="RUB">Rublo ruso (RUB) - Rusia</option>
+                            <option value="BRL">Real brasileño (BRL) - Brasil</option>
+                            <option value="CRC">Colón costarricense (CRC) - Costa Rica</option>
+                            <option value="UYU">Peso uruguayo (UYU) - Uruguay</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="moneda_destino">Moneda de destino:</label>
+                        <select id="moneda_destino" class="form-control">
+                            <option value="USD">Dólar estadounidense (USD) - Estados Unidos</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="ARS">Peso argentino (ARS) - Argentina</option>
+                            <option value="COP">Peso colombiano (COP) - Colombia</option>
+                            <option value="RUB">Rublo ruso (RUB) - Rusia</option>
+                            <option value="BRL">Real brasileño (BRL) - Brasil</option>
+                            <option value="CRC">Colón costarricense (CRC) - Costa Rica</option>
+                            <option value="UYU">Peso uruguayo (UYU) - Uruguay</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto">Monto:</label>
+                        <input type="number" id="monto" class="form-control" placeholder="Ingrese el monto" step="any"
+                            required />
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary">Convertir</button>
+                    </div>
+                    <div id="resultado" class="text-center mt-3"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="small text-center text-muted fst-italic">
+                        Copyright &copy; Oscar Chanataxi, Mateo Colina 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tasas = {
+            USD: 1,
+            EUR: 0.94,
+            ARS: 1016.47,
+            COP: 4385.67,
+            RUB: 102.39,
+            BRL: 6.04,
+            CRC: 506.24,
+            UYU: 43.58
+        }; // actualizado al 10/12/24 - 09:30
+
+        const banderas = {
+            USD: "img/usd.png",
+            EUR: "img/eur.png",
+            ARS: "img/ars.png",
+            COP: "img/cop.png",
+            RUB: "img/rub.png",
+            BRL: "img/brl.png",
+            CRC: "img/crc.png",
+            UYU: "img/uyu.png"
+        };
+
+        function convertirMoneda() {
+            const monto = parseFloat(document.getElementById('monto').value);
+            const monedaOrigen = document.getElementById('moneda_origen').value;
+            const monedaDestino = document.getElementById('moneda_destino').value;
+
+            if (isNaN(monto) || monto <= 0) {
+                document.getElementById('resultado').innerText = 'Ingrese un monto válido.';
+                return;
+            }
+
+            const montoDolares = monto / tasas[monedaOrigen];
+            const montoConvertido = montoDolares * tasas[monedaDestino];
+
+            const resultadoHTML = `
+                <div class="text-center">
+                    
+                    <p>${monto.toFixed(2)} ${monedaOrigen} <img src="${banderas[monedaOrigen]}" alt="${monedaOrigen}" style="width: 50px; height: auto;"> equivale a ${montoConvertido.toFixed(2)} ${monedaDestino} <img src="${banderas[monedaDestino]}" alt="${monedaDestino}" style="width: 50px; height: auto;"> </p>
+                </div>
+            `;
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+        }
+    </script>
+</body>
+
+</html>

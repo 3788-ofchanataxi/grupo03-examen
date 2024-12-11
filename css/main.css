@@ -1,0 +1,13 @@
+.navbar-nav .nav-link {
+    color: #000 !important; /* Asegura que el texto sea negro */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f56a00 !important; /* Color naranja para el hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: #f56a00 !important; /* Color naranja para el enlace activo */
+}

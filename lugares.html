@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Lugares Turísticos</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* CSS para mejorar la visualización de las imágenes */
+        .content-card img {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Mejorar la tipografía */
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .content-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-card:hover {
+            background-color: #e9ecef;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navegación */
+        .navbar-nav .nav-item .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" aria-label="Main Navigation">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Paises Bajos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="historia.html" aria-label="Historia y Formación">Historia y Formación</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cultura.html" aria-label="Cultura y Tradiciones">Cultura y Tradiciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="geografia.html" aria-label="Geografía y Biodiversidad">Geografía y Biodiversidad</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="economia.html" aria-label="Economía">Economía</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="lugares.html" aria-label="Lugares Turísticos">Lugares Turísticos</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="conversor.html" aria-label="Conversor de moneda">Conversor de moneda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('img/Paisajes.webp')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>Lugares Turísticos</h1>
+                        <span class="subheading">Descubre las maravillas del país.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content-->
+    <div class="container py-5">
+        <h1 class="text-center fw-bold mb-4">Lugares Emblemáticos de los Países Bajos</h1>
+    
+        <!-- Menú de navegación -->
+        <nav class="mb-4">
+            <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#amsterdam">Ámsterdam</a></li>
+                <li class="nav-item"><a class="nav-link" href="#parque-hoge-veluwe">Parque Hoge Veluwe</a></li>
+                <li class="nav-item"><a class="nav-link" href="#palacio-real">Palacio Real</a></li>
+                <li class="nav-item"><a class="nav-link" href="#molinos-kinderdijk">Molinos de Kinderdijk</a></li>
+                <li class="nav-item"><a class="nav-link" href="#keukenhof">Keukenhof</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rotterdam">Rotterdam</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gouda">Gouda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#utrecht">Utrecht</a></li>
+                <li class="nav-item"><a class="nav-link" href="#costa-mar-norte">Costa del Mar del Norte</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Secciones de los lugares -->
+        <div id="amsterdam" class="content-card mb-4">
+            <img src="img/amsterdam.jpeg" width="50%" class="img-fluid" alt="Ámsterdam">
+            <div class="p-4">
+                <h2 class="section-title">Ámsterdam: La ciudad de los canales</h2>
+                <p>Conocida por sus hermosos canales y vibrante vida nocturna, Ámsterdam es un destino cultural y artístico destacado. No te pierdas el Museo Van Gogh, la Casa de Ana Frank y los paseos en barco por los canales.</p>
+            </div>
+        </div>
+    
+        <div id="parque-hoge-veluwe" class="content-card mb-4">
+            <img src="img/parque.jpg" width="50%" class="img-fluid" alt="Parque Nacional Hoge Veluwe">
+            <div class="p-4">
+                <h2 class="section-title">El Parque Nacional De Hoge Veluwe</h2>
+                <p>Este parque nacional es ideal para disfrutar de actividades al aire libre como senderismo y ciclismo. Además, alberga el Museo Kröller-Müller con obras de Van Gogh y esculturas al aire libre.</p>
+            </div>
+        </div>
+    
+        <div id="palacio-real" class="content-card mb-4">
+            <img src="img/palacio.jpg" width="50%" class="img-fluid" alt="Palacio Real de Ámsterdam">
+            <div class="p-4">
+                <h2 class="section-title">El Palacio Real de Ámsterdam</h2>
+                <p>Ubicado en la Plaza Dam, este impresionante edificio del siglo XVII es una residencia oficial del monarca neerlandés y un símbolo de la historia y cultura del país.</p>
+            </div>
+        </div>
+    
+        <div id="molinos-kinderdijk" class="content-card mb-4">
+            <img src="img/molino.jpeg" width="50%" class="img-fluid" alt="Molinos de Kinderdijk">
+            <div class="p-4">
+                <h2 class="section-title">Los Molinos de Viento de Kinderdijk</h2>
+                <p>Estos 19 molinos históricos, Patrimonio de la Humanidad por la UNESCO, son una de las postales más icónicas de los Países Bajos.</p>
+            </div>
+        </div>
+    
+        <div id="keukenhof" class="content-card mb-4">
+            <img src="img/keukenhof.jpeg" width="50%" class="img-fluid" alt="Keukenhof">
+            <div class="p-4">
+                <h2 class="section-title">Keukenhof: El Jardín de Europa</h2>
+                <p>Conocido como el jardín más grande de flores del mundo, Keukenhof es famoso por sus campos de tulipanes. Se encuentra cerca de Ámsterdam y ofrece una impresionante variedad de flora en primavera.</p>
+            </div>
+        </div>
+    
+        <div id="rotterdam" class="content-card mb-4">
+            <img src="img/rotterdam.jpg" width="50%" class="img-fluid" alt="Rotterdam">
+            <div class="p-4">
+                <h2 class="section-title">Rotterdam: Ciudad de la Modernidad</h2>
+                <p>Rotterdam es conocida por su arquitectura moderna y su puerto, uno de los más grandes del mundo. Es un destino ideal para los amantes del diseño y la innovación.</p>
+            </div>
+        </div>
+    
+        <div id="gouda" class="content-card mb-4">
+            <img src="img/gouda.jpg" width="50%" class="img-fluid" alt="Gouda">
+            <div class="p-4">
+                <h2 class="section-title">Gouda: La Ciudad del Queso</h2>
+                <p>Famosa por su queso, Gouda es una ciudad encantadora con una arquitectura medieval bien conservada y mercados de queso tradicionales.</p>
+            </div>
+        </div>
+    
+        <div id="utrecht" class="content-card mb-4">
+            <img src="img/utrecht.jpg" width="50%" class="img-fluid" alt="Utrecht">
+            <div class="p-4">
+                <h2 class="section-title">Utrecht: Un encanto medieval</h2>
+                <p>Con sus canales únicos y una arquitectura encantadora, Utrecht es una ciudad con un ambiente relajado y un importante centro cultural.</p>
+            </div>
+        </div>
+    
+        <div id="costa-mar-norte" class="content-card mb-4">
+            <img src="img/costa-mar-norte.jpg" width="50%" class="img-fluid" alt="Costa del Mar del Norte">
+            <div class="p-4">
+                <h2 class="section-title">Costa del Mar del Norte</h2>
+                <p>La costa del Mar del Norte ofrece playas hermosas y tranquilas, ideales para escapar del bullicio de la ciudad y disfrutar del aire libre.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer>
+        <p>&copy; 2024 Lugares Turísticos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
